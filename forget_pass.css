@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    padding: 10px 10px;
+}
+input{
+    margin-top: 10px;
+    width: 150px;
+    padding: 5px 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+input:hover{
+    border: 2px solid grey;
+}
+.btn input{
+    padding: 15px 15px;
+    width: 100px;
+    height: 50px;
+}
+a{
+    text-decoration: none;
+}
