@@ -19,6 +19,7 @@ session_start();
      
      if(isset($_POST['submit'])){
         require_once('connection.php');
+        $error_message = "";
         $em = $_POST['Email'];
         $pass = $_POST['Password'];
         if(!empty($em) && !empty($pass)){
@@ -35,14 +36,14 @@ session_start();
                         header("location:shop/shopp.php");
                     }
                 }else{
-                    echo "Wrong Password";
+                    echo $error_message = "Wrong Password";
                 }
             }else{
-                echo "No such Account";
+                echo $error_message = "No such Account";
 
             }
         }else{
-            echo "Fill all fields";
+            echo $error_message = "Fill all fields";
         }
      }
 
@@ -58,6 +59,7 @@ session_start();
                 <label for="l_password">Password:</label>
                 <input type="password" name="Password" id="l_password">
             </div>
+            <p style = "color:red"><?php echo $error_message  ?></p> 
             <input class="btn" type="submit" value="LOGIN" name="submit">
             <p>New user <a href="registration.php">Sign Up</a></p>
             <p><a href="forgot-password.php">Forgot Password</a></p>
